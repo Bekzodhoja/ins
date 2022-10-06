@@ -18,7 +18,8 @@
     "react-web-share": "^1.1.6",
     "swiper": "^8.0.6",
     "uuid": "^8.3.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "react-scripts start",
