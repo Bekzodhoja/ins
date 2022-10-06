@@ -27,17 +27,7 @@ import { AiOutlineSmile as SmileIcon } from "react-icons/ai";
 import { GoChevronRight as NextIcon } from "react-icons/go";
 import { MdVerified as VerifiedIcon } from "react-icons/md";
 
-import {
-  addDoc,
-  arrayRemove,
-  collection,
-  doc,
-  limit,
-  onSnapshot,
-  query,
-  serverTimestamp,
-  updateDoc,
-  arrayUnion,
+import {addDoc,arrayRemove,collection,doc,limit,onSnapshot,query,serverTimestamp,updateDoc,arrayUnion,
 } from "firebase/firestore";
 import { firestore } from "../firebase/config";
 import { AuthContext } from "../context/AuthContext";

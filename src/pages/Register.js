@@ -82,35 +82,20 @@ const Register = () => {
       <div className="h-screen w-screen flex flex-wrap items-center justify-center p-3">
         <div className="flex items-center">
           <div className="flex flex-col flex-shrink-0 w-[350px]">
-            <div className="flex flex-col items-center justify-center rounded w-full border-[1px] border-gray-300 bg-white p-6">
+            <div className="flex flex-col items-center justify-center rounded-xl w-full border-[1px] bg-white p-4 shadow-2xl">
               <div className="w-full">
                 <img
                   src="/images/logo-full.png"
-                  className="h-14 mt-4 mx-auto my-3"
+                  className="h-20 mt-2 mx-auto my-2"
                   alt="instagram"
                 />
               </div>
               <p className="text-center font-bold  text-lg text-slate-800">
-                Sign up to see photos and videos from your friends.
+              Register To Make Friends.
               </p>
-              <div className="my-4 bg-blue-500 p-2 w-full rounded">
-                <button
-                  className="text-white flex items-center justify-center w-full"
-                  type="button"
-                  disabled
-                >
-                  <FacebookIcon fill="#fff" />
-                  <span className="text-xs font-semibold ml-1">
-                    Log in with Facebook
-                  </span>
-                </button>
-              </div>
-              <div className="flex gap-2 items-center my-3 w-full">
-                <div className="border-b-[1px] bg-transparent border-gray-400 h-0 w-full"></div>
-                <div className="uppercase text-gray-500 font-semibold text-base">
-                  or
-                </div>
-                <div className="border-b-[1px] bg-transparent border-gray-400 h-0 w-full"></div>
+             
+              <div className="flex items-center my-3 w-full">
+                <div className="border-b-[1px] border-black h-0 w-full"></div>
               </div>
               <div className="w-full px-5">
                 <form
@@ -118,48 +103,52 @@ const Register = () => {
                   method="POST"
                   onSubmit={(e) => submitForm(e)}
                 >
+                  <span>Email</span>
                   <div className="w-full">
                     <div className="w-full">
                       <div className="w-full mb-3">
                         <input
-                          placeholder="Enter your email"
+                          placeholder="Enter Your Email"
                           type="text"
-                          className="text-xs p-2 border-[1px] rounded bg-gray-200/10 w-full border-gray-300"
+                          className="text-xs p-3 border-[1px] rounded bg-white w-full border-black"
                           onChange={(e) => setEmail(e.target.value)}
                           value={email}
                         />
+
                       </div>
                     </div>
-
+                    <span>Full Name</span>
                     <div className="w-full">
                       <div className="w-full mb-3">
                         <input
-                          placeholder="Full Name"
+                          placeholder="Enter Your Full Name"
                           type="text"
-                          className="text-xs p-2 border-[1px] rounded bg-gray-200/10 w-full border-gray-300"
+                          className="text-xs p-3 border-[1px] rounded bg-white w-full border-black"
                           onChange={(e) => setFullname(e.target.value)}
                           value={fullname}
                         />
+                      
                       </div>
                     </div>
+                    <span>Username</span>
                     <div className="w-full">
                       <div className="w-full mb-3">
                         <input
-                          placeholder="Username"
+                          placeholder="Enter Your Username"
                           type="text"
-                          className="text-xs p-2 border-[1px] rounded bg-gray-200/10 w-full border-gray-300"
+                          className="text-xs p-3 border-[1px] rounded bg-white w-full border-black"
                           onChange={(e) => setUsername(e.target.value)}
                           value={username}
                         />
                       </div>
                     </div>
-
+                    <span>Password</span>
                     <div className="">
                       <div className="relative">
                         <input
                           type={showPassword ? "password" : "text"}
-                          className="text-xs p-2 border-[1px] rounded bg-gray-200/10 w-full border-gray-300"
-                          placeholder="Password"
+                          className="text-xs p-3 border-[1px] rounded bg-white w-full border-black"
+                          placeholder="Enter Your Password"
                           onChange={(e) => setPassword(e.target.value)}
                           value={password}
                         />
@@ -180,9 +169,9 @@ const Register = () => {
                         )}
                       </div>
                     </div>
-                    <div className="w-full mt-2">
+                    <div className="w-full mt-4">
                       <button
-                        className="w-full bg-blue-400 text-xs text-white font-semibold p-1 rounded-sm"
+                        className="w-full bg-blue-500 text-x text-white font-semibold p-1 rounded-2xl"
                         disabled={disabled}
                         type="submit"
                       >
@@ -199,36 +188,22 @@ const Register = () => {
                       {errorMsg}
                     </div>
                   )}
-                  <div className="text-center w-full text-xs font-thin my-4">
+                  <div className="text-blue-500 text-center w-full text-x font-thin my-3">
                     <a href="/accounts/password/reset/">Forgot password?</a>
                   </div>
-                </form>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center justify-center rounded w-full border-[1px] border-gray-300 mt-4 bg-white p-6">
+                  <div className="flex flex-col items-center justify-center">
               <div className="text-sm">
-                Have an account?{" "}
-                <Link to="/login" className="text-blue-500 font-semibold">
+                <Link to="/login" className="text-blue-500 text-xl font-semibold">
                   Log in
                 </Link>
               </div>
             </div>
-
-            <div className="flex flex-col items-center justify-center rounded w-full mt-4">
-              <p className="text-sm ">Get the app</p>
-              <a
-                target="_blank"
-                href="https://github.com/theviralboy/instagram-firebase"
-                className="text-sm"
-              >
-                <img src="/images/get-it-on-github.png" className="h-16" />
-              </a>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </>
   );
 };

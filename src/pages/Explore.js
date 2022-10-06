@@ -40,7 +40,7 @@ const Explore = () => {
   return (
     <div>
       <Header />
-      <div className="lg:max-w-4xl mt-14 lg:mx-auto mb-8">
+      <div className="lg:max-w-4xl mt-14 lg:mx-auto mb-8 ">
         <div className="block sm:hidden p-2">
           <div className="p-2 items-center w-full border-[1px] rounded">
             <form action="">
@@ -49,7 +49,7 @@ const Explore = () => {
                 <input
                   type="text"
                   placeholder="Search"
-                  className="bg-transparent h-full outline-none"
+                  className="bg-transparent h-full outline-none "
                 />
               </div>
             </form>
@@ -79,14 +79,6 @@ const Explore = () => {
             />
           ))}
         </motion.div>
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={() => setLimitNum(limitNum + 9)}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Load More
-          </button>
-        </div>
       </div>
     </div>
   );

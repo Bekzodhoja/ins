@@ -228,14 +228,7 @@ const ReelsVideoCard = ({ video }) => {
               }}
             >
               <div className="flex gap-2 items-center">
-                <img
-                  src={
-                    "https://avatars.githubusercontent.com/u/83828231?s=40&v=4"
-                  }
-                  loading="lazy"
-                  alt={user?.displayName}
-                  className="h-8 aspect-square object-cover rounded-full"
-                />
+
                 <input
                   type="text"
                   className="w-full border-2 border-gray-300 rounded-lg text-sm p-2"

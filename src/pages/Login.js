@@ -61,21 +61,21 @@ const Login = () => {
     <>
       <div className="h-screen w-screen flex flex-wrap items-center justify-center p-3">
         <div className="flex items-center">
-          <div className="hidden md:block">
-            <img
-              src="/images/login-side-img.png"
-              className="max-h-[500px]"
-              alt="login"
-            />
-          </div>
           <div className="flex flex-col flex-shrink-0 w-[350px]">
-            <div className="flex flex-col items-center justify-center rounded w-full border-[1px] border-gray-300 bg-white p-6">
+            <div  className="flex flex-col items-center justify-center rounded-xl w-full border-[1px] bg-white p-4 shadow-2xl">
               <div className="w-full">
                 <img
                   src="/images/logo-full.png"
                   className="h-14 mt-4 mx-auto my-3"
                   alt="instagram"
                 />
+                  <p className="text-center font-bold  text-lg text-slate-800">
+              Log In To Make Friends.
+              </p>
+             
+              <div className="flex items-center my-3 w-full">
+                <div className="border-b-[1px] border-black h-0 w-full"></div>
+              </div>
               </div>
               <div className="w-full px-5">
                 <form
@@ -83,25 +83,27 @@ const Login = () => {
                   method="POST"
                   onSubmit={(e) => submitForm(e)}
                 >
+                  <span>Email</span>
                   <div className="w-full">
                     <div className="w-full">
                       <div className="w-full mb-3">
                         <input
-                          placeholder="Phone number, username, or email"
+                          placeholder="Enter Your Email"
                           name="username"
                           type="text"
-                          className="text-xs p-2 border-[1px] rounded bg-gray-200/10 w-full border-gray-300"
+                          className="text-xs p-3 border-[1px] rounded bg-white w-full border-black"
                           onChange={(e) => setEmail(e.target.value)}
                           value={email}
                         />
                       </div>
                     </div>
+                    <span>Password</span>
                     <div className="">
                       <div className="relative">
                         <input
                           type={showPassword ? "password" : "text"}
-                          className="text-xs p-2 border-[1px] rounded bg-gray-200/10 w-full border-gray-300"
-                          placeholder="Password"
+                          className="text-xs p-3 border-[1px] rounded bg-white w-full border-black"
+                          placeholder="Enter Your Password"
                           onChange={(e) => setPassword(e.target.value)}
                           value={password}
                         />
@@ -122,9 +124,9 @@ const Login = () => {
                         )}
                       </div>
                     </div>
-                    <div className="w-full mt-2">
+                    <div className="w-full mt-4">
                       <button
-                        className="w-full bg-blue-400 text-xs text-white font-semibold p-1 rounded-sm"
+                       className="w-full bg-blue-500 text-x text-white font-semibold p-1 rounded-2xl"
                         disabled={disabled}
                         type="submit"
                       >
@@ -135,57 +137,28 @@ const Login = () => {
                         )}
                       </button>
                     </div>
-                    <div className="flex gap-2 items-center my-3">
-                      <div className="border-b-[1px] bg-transparent border-gray-400 h-0 w-full"></div>
-                      <div className="uppercase text-gray-500 font-semibold text-base">
-                        or
-                      </div>
-                      <div className="border-b-[1px] bg-transparent border-gray-400 h-0 w-full"></div>
-                    </div>
-                    <div className="my-4 ">
-                      <button
-                        className="text-[#4267B2] flex items-center justify-center w-full"
-                        type="button"
-                        disabled
-                      >
-                        <FacebookIcon fill="#4267B2" />
-                        <span className="text-xs font-semibold ml-1">
-                          Log in with Facebook
-                        </span>
-                      </button>
-                    </div>
+       
                   </div>
                   {errorMsg?.length > 0 && (
                     <div className="text-center text-xs my-4 text-red-600">
                       {errorMsg}
                     </div>
                   )}
-                  <div className="text-center w-full text-xs font-thin mb-4">
+                  <div className="text-blue-500 text-center w-full text-x font-thin my-3">
                     <a href="/forgot-password">Forgot password?</a>
                   </div>
-                </form>
-              </div>
-            </div>
-
-            <div className="flex flex-col items-center justify-center rounded w-full border-[1px] border-gray-300 mt-4 bg-white p-6">
+                  <div className="flex flex-col items-center justify-center">
               <div className="text-sm">
-                Don't have an account?{" "}
-                <Link to="/register" className="text-blue-500 font-semibold">
+                <Link to="/register"className="text-blue-500 text-xl font-semibold">
                   Sign up
                 </Link>
               </div>
             </div>
-
-            <div className="flex flex-col items-center justify-center rounded w-full mt-4">
-              <p className="text-sm ">Get the app</p>
-              <a
-                target="_blank"
-                href="https://github.com/theviralboy/instagram-firebase"
-                className="text-sm"
-              >
-                <img src="/images/get-it-on-github.png" className="h-16" />
-              </a>
+                </form>
+              </div>
             </div>
+
+         
           </div>
         </div>
       </div>

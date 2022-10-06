@@ -199,7 +199,7 @@ const Profile = () => {
                       </div>
                     )}
                     <LazyLoadImage
-                      className="rounded-full h-full w-full border-2 border-pink-600 md:p-1 p-0.5"
+                      className="rounded-full h-full w-full border-2 border-emerald-500 md:p-1 p-0.5"
                       src={
                         profileUser?.photoURL ||
                         "https://parkridgevet.com.au/wp-content/uploads/2020/11/Profile-300x300.png"
@@ -251,25 +251,25 @@ const Profile = () => {
                       <span className="font-semibold">
                         {profileUser?.posts?.length || 0}{" "}
                       </span>
-                      posts
+                      Posts
                     </li>
                     <li>
                       <span className="font-semibold">
                         {profileUser?.followedBy?.length || 0}{" "}
                       </span>
-                      followers
+                      Followers
                     </li>
                     <li>
                       <span className="font-semibold">
                         {profileUser?.following?.length || 0}{" "}
                       </span>
-                      following
+                      Following
                     </li>
                   </ul>
                   {/* user meta form medium screens */}
                   <div className="hidden md:block">
                     <h1 className="font-semibold">{profileUser?.fullName}</h1>
-                    <p className="font-normal text-sm text-gray-600">
+                    <p className="font-normal text-sm textblack">
                       {profileUser?.categoryName}
                     </p>
                     <p
@@ -313,22 +313,22 @@ const Profile = () => {
                 text-center p-2 text-gray-600 leading-snug text-sm"
                 >
                   <li>
-                    <span className="font-semibold text-gray-800 block">
+                    <span className="font-semibold text-black block">
                       {profileUser?.posts?.length || 0}{" "}
                     </span>
-                    posts
+                    Posts
                   </li>
                   <li>
-                    <span className="font-semibold text-gray-800 block">
+                    <span className="font-semibold text-black block">
                       {profileUser?.followedBy?.length || 0}{" "}
                     </span>
-                    followers
+                    Followers
                   </li>
                   <li>
-                    <span className="font-semibold text-gray-800 block">
+                    <span className="font-semibold text-black block">
                       {profileUser?.following?.length || 0}{" "}
                     </span>
-                    following
+                    Following
                   </li>
                 </ul>
                 {/* flexbox grid */}

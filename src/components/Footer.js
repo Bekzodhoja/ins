@@ -121,22 +121,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="text-sm">
-          <div className="">
-            <div className="">
-              <span className="font-semibold">&copy; {date.getFullYear()}</span>{" "}
-              Instagram Firebase by{" "}
-              <a
-                href="https://www.instagram.com/sahilverma.dev/"
-                target={"_blank"}
-                rel="nofollow noopener noreferrer"
-                className="font-semibold"
-              >
-                Sahil Verma
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );
