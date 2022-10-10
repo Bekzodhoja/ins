@@ -6,15 +6,15 @@ import { getStorage } from "firebase/storage";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDnLKtDxj747lkoFbn8MNJ2Xo-d3Zkw4-E",
-  authDomain: "insooo-6f173.firebaseapp.com",
-  databaseURL: "https://insooo-6f173-default-rtdb.firebaseio.com",
-  projectId: "insooo-6f173",
-  storageBucket: "insooo-6f173.appspot.com",
-  messagingSenderId: "379601684763",
-  appId: "1:379601684763:web:9c78cf02ecf74ee9eaebbe",
-  measurementId: "G-E74DLRBVP3"
+  apiKey: "AIzaSyBh2mSL89OofnoyANgs6NTF3vnfEp3S2iI",
+  authDomain: "instagramm-1f58d.firebaseapp.com",
+  databaseURL: "https://instagramm-1f58d-default-rtdb.firebaseio.com",
+  projectId: "instagramm-1f58d",
+  storageBucket: "instagramm-1f58d.appspot.com",
+  messagingSenderId: "132502149494",
+  appId: "1:132502149494:web:29883ac8b8fdc439fac257"
 };
+
 
 
 
